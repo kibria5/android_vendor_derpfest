@@ -35,7 +35,7 @@ if [[ -f "$file_path" ]]; then
     version=$(basename "$file_path" | cut -d'-' -f2)
     sha256=$(cut -d' ' -f1 "$file_path".sha256sum)
     datetime=$(grep -w ro\\.build\\.date\\.utc "$buildprop" | cut -d= -f2)
-    link=https://sourceforge.net/projects/derpfest/files/$device_name/$file_name/download
+    link=https://sourceforge.net/projects/garnet-aosp/files/$device_name/$file_name/download
     
     # Determine ROM type based on filename
     if [[ $file_name == *"Official"* ]]; then
